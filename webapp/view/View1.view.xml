@@ -1,0 +1,44 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m"
+          controllerName="com.emc.fin.ap.controller.View1">
+        <Page title="View 1">
+        <headerContent>
+          <Button press="onNext" icon= "sap-icon://chevron-phase"></Button>
+        </headerContent>
+        
+        <content>
+        <!-- <Button press="onNext" text= "Navigate"></Button> -->
+        <SearchField id="idSearch" search="onSearch" liveChange="onSearch"></SearchField>
+        <List id="idMylist" items="{path:'/ProductSet'}" mode="SingleSelectMaster" selectionChange="onItemSelect"  delete="onItemDelete" growing="true" growingThreshold="10">
+        <headerToolbar>
+        <Toolbar>
+        <ToolbarSpacer/>
+        <Button icon="sap-icon://delete" press="onItemsDelete" tooltip="Delete Selected Items"></Button>
+        </Toolbar>
+        </headerToolbar>
+        
+        <items>
+        
+        <ObjectListItem  title="{NAME}"  number="{PRICE}" intro="{CATEGORY}" numberUnit="{CURRENCY_CODE}"  icon="{PRODUCT_PIC_URL}">
+        <firstStatus>
+        <ObjectStatus text="{SUPPLIER_NAME}" state="{path:'status', formatter:'.formatter.getStatus'}"></ObjectStatus>
+        </firstStatus>
+        <attributes>
+        <ObjectAttribute text="{DESCRIPTION}" title="benefits"></ObjectAttribute>
+        </attributes>
+        </ObjectListItem>
+
+        
+
+        </items>
+        </List>
+        </content>
+
+        <footer>
+          <Toolbar>
+          <ToolbarSpacer/>
+          <Button icon = "sap-icon://add" press= "onAdd" tooltip = "Add New Products"> </Button>
+          </Toolbar>
+        </footer>
+        </Page>
+    
+</mvc:View>

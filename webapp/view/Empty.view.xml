@@ -1,0 +1,6 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m"
+          controllerName="com.emc.fin.ap.controller.Empty">
+          <Page title="Empty View">
+          <Image src="https://easydrawingart.com/wp-content/uploads/2019/08/How-to-draw-Venom.jpg" width="1100px"/>
+          </Page>
+</mvc:View>
