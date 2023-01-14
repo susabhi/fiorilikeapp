@@ -9,7 +9,8 @@
         <!-- <Button press="onNext" text= "Navigate"></Button> -->
         <SearchField id="idSearch" search="onSearch" liveChange="onSearch"></SearchField>
         <List id="idMylist" items="{path:'/ProductSet'}" mode="SingleSelectMaster" selectionChange="onItemSelect"  delete="onItemDelete" growing="true" growingThreshold="10">
-        <headerToolbar>
+        <headerToolbar>  
+          <!-- robert changes  -->
         <Toolbar>
         <ToolbarSpacer/>
         <Button icon="sap-icon://delete" press="onItemsDelete" tooltip="Delete Selected Items"></Button>
