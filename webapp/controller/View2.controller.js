@@ -67,11 +67,11 @@ sap.ui.define([
 
                     // syntax or bind aggregation
                     that.oPopupSupplier.bindAggregation("items", {
-                        path: "/suppliers",
+                        path: "fruit>/suppliers",
                         template: new sap.m.ObjectListItem({
-                            title: '{name}',
-                            intro: '{sinceWhen}',
-                            number: '{contactNo}'
+                            title: '{fruit>name}',
+                            intro: '{fruit>sinceWhen}',
+                            number: '{fruit>contactNo}'
                         })
                     });
                     that.oPopupSupplier.open();
@@ -101,11 +101,11 @@ sap.ui.define([
 
                     // syntax or bind aggregation
                     that.oCityPopup.bindAggregation("items", {
-                        path: "/cities",
+                        path: "fruit>/cities",
                         template: new sap.m.ObjectListItem({
-                            title: '{name}',
-                            intro: '{famousFor}',
-                            number: '{otherName}'
+                            title: '{fruit>name}',
+                            intro: '{fruit>famousFor}',
+                            number: '{fruit>otherName}'
                         })
                     });
                     that.oCityPopup.open();

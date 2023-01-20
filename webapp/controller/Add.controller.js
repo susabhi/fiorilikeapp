@@ -72,6 +72,12 @@ sap.ui.define([
 
             });
 
+        this.getImageForProduct(this.productId, oDataModel);
+
+        },
+
+        getImageForProduct:function(sProdId, oDataModel){
+        this.getView().byId("MyImage").setSrc("/sap/opu/odata/sap/ZNOV_ODATA_SRV/ProductImgSet('"+ sProdId +"')/$value");
         },
 
 
@@ -193,6 +199,7 @@ sap.ui.define([
                 }
             })
         }
+    
 
 
 

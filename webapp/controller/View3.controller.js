@@ -13,7 +13,7 @@ sap.ui.define([
         herculis:function(oEvent){   // route match handler function 
             
             var suppId= oEvent.getParameter("arguments").suppId;
-            var sPath = '/suppliers/' + suppId;
+            var sPath = 'fruit>/suppliers/' + suppId;
             this.getView().bindElement(sPath);
         },
         onBack: function(){
@@ -27,6 +27,11 @@ sap.ui.define([
                 oRouter.navTo("spiderman", {}, true);
             }
 
+        },
+
+        onchartchange: function(oEvent){
+           var sKey= oEvent.getSource().getSelectedKey();
+           this.getView().byId("idVizFrame").setVizType(sKey);
         }
     });
 });

@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"ui5ts.manifestlocation": "projects/fiorilikeapp/webapp/manifest.json"
+	}
+}

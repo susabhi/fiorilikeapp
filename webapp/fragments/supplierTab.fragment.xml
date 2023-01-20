@@ -1,5 +1,5 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.ui.layout.form">
-    <Table id="idTable" items="{/suppliers}" itemPress= "onItemPressSupp">
+    <Table id="idTable" items="{fruit>/suppliers}" itemPress= "onItemPressSupp">
     <headerToolbar>
     <Toolbar>
     <ToolbarSpacer/>
@@ -34,12 +34,12 @@
 
         <ColumnListItem type="Navigation" >
             <cells>
-                <Text text="{name}" />
-                <Input value="{city}"  showValueHelp="true" valueHelpRequest="onF4Help"/>
-                <Text text="{sinceWhen}" />
+                <Text text="{fruit>name}" />
+                <Input value="{fruit>city}"  showValueHelp="true" valueHelpRequest="onF4Help"/>
+                <Text text="{fruit>sinceWhen}" />
                 <VBox>
-                    <Text text="{contactPerson}" />
-                    <Text text="{contactNo}" />
+                    <Text text="{fruit>contactPerson}" />
+                    <Text text="{fruit>contactNo}" />
                 </VBox>
             </cells>
         </ColumnListItem>
